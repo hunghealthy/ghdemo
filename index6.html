@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <script>
+        const cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];
+        let text = "";
+        for (let i = 0; i < cars.length; i++) {
+            text += cars[i] + "<br>";
+        }
+        document.getElementById("demo").innerHTML = text;
+        const person = {fname:"John", lname:"Doe", age:25}; 
+        let text2 = "";
+        for (let x in person) {
+            text2 += person[x] + " ";
+        }
+        document.getElementById("demo2").innerHTML = text2;
+        const numbers = [45, 4, 9, 16, 25];
+        let text3 = "";
+        numbers.forEach(myfunction);
+        function myfunction(value, index, array) {
+            text3 += " " + value + " ";
+        }
+        document.getElementById("demo3").innerHTML = text3;
+        const cars2 = ["BMW", "Volvo", "Mini"];
+        let text4 = "";
+        for (let y of cars2) {
+            text4 += y + " ";
+        }
+        document.getElementById("demo4").innerHTML = text4;
+        let language = "JavaScript";
+        let text5 = "";
+        for (let z of language) {
+            text5 += z + " ";
+        }
+        document.getElementById("demo5").innerHTML = text5;
+    </script>
+
+</body>
+</html>

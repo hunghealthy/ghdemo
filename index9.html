@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        const person = {
+            name: "Hung Vu",
+            age: 30,
+            birthDate: "1992-03-03",
+            city: "Ho Chi Minh",
+            today: new Date(),
+            job: function() {return 10;},
+            language: "en",
+            get lang() {
+                return person.language;
+            }
+        };
+        const myArray = Object.values(person);
+        let myString = JSON.stringify(person);
+        person.job =  person.job.toString();
+        document.getElementById("demo").innerHTML = myArray + "<br> " + myString + "<br>" + person.lang;
+    </script>
+</body>
+</html>

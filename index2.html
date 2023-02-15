@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS 2</title>
+</head>
+<body>
+    <h1>Demo JS</h1>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <button onclick="myfunction()">Click here to choose your reward</button>
+    <script>
+        function myfunction() {
+            const fruits = ["apple","banana","cherry","cocoa","coffee","corn"];
+            let fLen = fruits.length;
+            let text = "<ul>";
+            for (let i = 0; i < fLen; i++){
+                text += "<li>" + fruits[i] + "</li>";
+            }
+        text += "</ul>";
+            document.getElementById("demo").innerHTML = text;
+        }
+    </script>
+    <script>
+        const fruits = ["apple","banana","cherry","cocoa","coffee","corn"];
+        const souls = ["Gold","Silver","Green","Blue","Red"];
+        fruits.push("marion");
+        fruits[fruits.length] = "kakakakakakak";
+        const fsconcat = fruits.concat(souls);
+        let text = "<ul>";
+        fruits.forEach(myfunction2);
+        text += "</ul>";
+        document.getElementById("demo2").innerHTML = text;
+        document.getElementById("demo2").innerHTML = fsconcat;
+        document.getElementById("demo2").innerHTML = fsconcat.sort();
+        function myfunction2(value) {
+            text += "<li>" + value + "</li>";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <!-- <script>
+        let i = 0;
+        let text = "";
+        do {
+            text += "Number is " + i + " ";
+            i++;
+        }
+        while (i < 10);
+        document.getElementById("demo").innerHTML = text;
+    </script> -->
+    <!-- <script>
+        let text = "";
+        for (let i = 0; i < 10; i++) {
+            if (i == 4) { continue;}
+            text += "Number is " + i + "<br>";
+        }
+        document.getElementById("demo").innerHTML = text;
+    </script> -->
+    <script>
+        const name = "W3Schools";
+        const letters = ["a","b","c"];
+        const letters2 = new Set(["a","b"]);
+        let t1 = "";
+        let t2 = "";
+        let t3 = "";
+        for (const x of name) {
+            t1 += x + " ";
+        }
+        for (const y of letters) {
+            t2 += y + " ";
+        }
+        for (const z of letters2) {
+            t3 += z + " ";
+        }
+        document.getElementById("demo").innerHTML = t1 + t2 + t3 + " ";
+    </script>
+</body>
+</html>

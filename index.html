@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <P id="demo4"></P>
+    <button id="demo4" onclick="myFunction2()">Click</button>
+    <p id="demo5"></p>
+    <button id="demo5" onclick="myF1()">But1</button>
+    <button id="demo5" onclick="myF2()">But2</button>
+    <button id="demo5" onclick="myF3random()">But3</button><br>
+    <p>The biggest is <span id="demo6"></span> and the smallest is <span id="demo7"></span></p><br>
+    <buton id="">Click more</buton>
+    <script>
+        const array = ["soul","awaking","equipment"];
+        let t = "<ul>";
+            array.forEach(myFunction);
+        t += "</ul>";
+        document.getElementById("demo").innerHTML = t;
+        function myFunction(value){
+            t += "<li>" + value + "</li>";
+        }
+    </script>
+    <script>
+        function myFunction2(){
+            const fruits = ["Banana", "Orange", "Apple", "Mango"];
+            document.getElementById("demo2").innerHTML = fruits;
+            fruits.sort();
+            fruits.reverse();
+            document.getElementById("demo3").innerHTML = fruits;
+        }
+    </script>
+    <script>
+        const points = [40, 100, 1, 5, 25, 10];
+        document.getElementById("demo5").innerHTML = points;
+
+        function myF1() {
+            points.sort(function(a,b){return a - b});
+            document.getElementById("demo5").innerHTML = points;
+        }
+        function myF2() {
+            points.sort(function(a,b){return b - a});
+            document.getElementById("demo5").innerHTML = points;
+        }
+        function myF3random() {
+            points.sort(function(){return 0.5 - Math.random()});
+            document.getElementById("demo5").innerHTML = points;
+        }
+        function myF4max(arr) {
+            return Math.max.apply(null, arr);
+        }
+        function myF5min(arr) {
+            return Math.min.apply(null, arr);
+        }
+        document.getElementById("demo6").innerHTML = myF4max(points);
+        document.getElementById("demo7").innerHTML = myF5min(points);
+    </script>
+</body>
+</html>

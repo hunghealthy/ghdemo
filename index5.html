@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <script>
+        const numbers = [45, 4, 9, 16, 25];
+        // let text = "";
+        // const numbers2 = numbers.map(myfunction2);
+        // numbers.forEach(myfunction2);
+        // document.getElementById("demo").innerHTML = text;
+        // document.getElementById("demo2").innerHTML = numbers2;
+
+        // function myfunction(value,index,array) {
+        //     text += value + "<br>";
+        // }
+        // function myfunction2(value,index,array) {
+        //     return value * 2;
+        // }
+        const over18 = numbers.filter(myfunction3);
+        document.getElementById("demo").innerHTML = over18;
+        function myfunction3(value,index,array) {
+            return value > 18;
+        }
+    </script>
+</body>
+</html>
